@@ -4,6 +4,9 @@ const restaurantRouter = require('./routes/restaurants.js')
 
 const app = express()
 
+app.use(express.json())
+app.use(express.urlencoded({ extended: false }))
+
 // Routers
 app.use('/apis/restaurants', restaurantRouter)
 
