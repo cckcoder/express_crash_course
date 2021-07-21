@@ -30,4 +30,16 @@
 * DELETE
     `/apis/restaurants/1`
 
+## Request
+* req.params
+* req.query
+* req.body
+
+## Response
+
+* res.send()
+* res.sendFile()
+* res.sendStatus()
+* res.json()
+
 
