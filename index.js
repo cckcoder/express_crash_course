@@ -2,8 +2,24 @@ const express = require('express')
 
 const app = express()
 
-app.get('/', (req, res) => {
-  res.send('<h1>Hello Express</h1>')
+app.get('/apis/restaurants', (req, res) => {
+  res.send('GET API')
+})
+
+app.get('/apis/restaurants/:id', (req, res) => {
+  res.send('GET ONE API')
+})
+
+app.post('/apis/restaurants', (req, res) => {
+  res.send('POST API')
+})
+
+app.put('/apis/restaurants/:id', (req, res) => {
+  res.send('PUT API')
+})
+
+app.delete('/apis/restaurants/:id', (req, res) => {
+  res.send('DELETE API')
 })
 
 app.listen(3000, () => {
