@@ -1,25 +1,14 @@
 const express = require('express')
 
+const restaurantRouter = require('./routes/restaurants.js')
+
 const app = express()
 
-app.get('/apis/restaurants', (req, res) => {
-  res.send('GET API')
-})
+// Routers
+app.use('/apis/restaurants', restaurantRouter)
 
-app.get('/apis/restaurants/:id', (req, res) => {
-  res.send('GET ONE API')
-})
-
-app.post('/apis/restaurants', (req, res) => {
-  res.send('POST API')
-})
-
-app.put('/apis/restaurants/:id', (req, res) => {
-  res.send('PUT API')
-})
-
-app.delete('/apis/restaurants/:id', (req, res) => {
-  res.send('DELETE API')
+app.get('/', (req, res) => {
+  res.send('<h1>Welcome to Express</h1>')
 })
 
 app.listen(3000, () => {
